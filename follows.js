@@ -222,7 +222,8 @@
 	}
 
 	function setFeeds(feeds) {
-		$('#welcome').addClass('hidden');
+		//$('#welcome').addClass('hidden');
+		$('#welcome').removeClass('hidden');
 		feeds.forEach(function(id) {
 
 			var thisFeedId, thisFeedDatastreams;
