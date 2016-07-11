@@ -145,7 +145,7 @@
 									});
 									datastreamidjm[i] = datastream.id;
 									i = i+1;
-									brake;
+									
 									// Initialize Graph DOM Element
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .graph').attr('id', 'graph-' + feedId + '-' + datastream.id);
 									console.log(series);	
@@ -160,7 +160,9 @@
 						}
 					} else {
 						$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .graphWrapper').html('<div class="alert alert-box no-info">Sorry, this datastream does not have any associated data.</div>');
+			
 					}
+				brake;
 				});
 				// Build Graph
 									var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
@@ -178,7 +180,7 @@
 											bottom: 0.02,
 											left: 0.02
 										},
-										series: series[0]
+										series: series
 									});
 
 									graph.render();
