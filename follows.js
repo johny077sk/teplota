@@ -421,11 +421,11 @@
 //		}
 	});
 
-	if(key != '' && feedString != '') {
-		setApiKey($('#apiKeyInput').val());
-		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
-		setFeeds(feeds);
-	}
+//	if(key != '' && feedString != '') {
+//		setApiKey($('#apiKeyInput').val());
+//		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
+//		setFeeds(feeds);
+//	}
 
 	if(key != '') {
 		$("#apiKeyInput").prop('disabled', true);
