@@ -80,7 +80,7 @@
 				var datastreamidjm = [];
 				var i = 0;
 				series = [];
-				feedData.datastreams.forEach(function(datastream) {
+				//feedData.datastreams.forEach(function(datastream) {
 					var now = new Date();
 					var then = new Date();
 					var updated = new Date;
@@ -162,8 +162,8 @@
 						$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .graphWrapper').html('<div class="alert alert-box no-info">Sorry, this datastream does not have any associated data.</div>');
 			
 					}
-				brake;
-				});
+			
+			//	});
 				// Build Graph
 									var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
 									var graph = new Rickshaw.Graph( {
