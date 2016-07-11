@@ -145,7 +145,7 @@
 									});
 									datastreamidjm[i] = datastream.id;
 									i = i+1;
-									
+									brake;
 									// Initialize Graph DOM Element
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .graph').attr('id', 'graph-' + feedId + '-' + datastream.id);
 									console.log(series);	
