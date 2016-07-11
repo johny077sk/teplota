@@ -178,7 +178,7 @@
 											bottom: 0.02,
 											left: 0.02
 										},
-										series: series
+										series: series[0]
 									});
 
 									graph.render();
