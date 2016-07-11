@@ -166,7 +166,7 @@
 									var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
 									var graph = new Rickshaw.Graph( {
 										//element: document.querySelector('#graph-' + feedId + '-' + 'TeplotaKosice0'),//datastream.id),
-										element: document.querySelector("#graph"),
+										element: document.querySelector("graph"),
 										width: 900,
 										height: 300,
 										renderer: 'line',
