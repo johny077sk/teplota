@@ -411,21 +411,21 @@
 
 	var feeds = feedString.split(',');
 
-	//$('#apiKeyInput').val(key);
-	//$('#feedsInput').val(feedString);
+	$('#apiKeyInput').val(key);
+	$('#feedsInput').val(feedString);
 
-//	$("#apiKeyInput").mouseover(function() {
-//		console.log($("#apiKeyInput").prop('disabled'));
-////		if($("#apiKeyInput").prop('disabled')) {
-//			$("#apiKeyInput").prop('disabled', false);
-//		}
-//	});
+	$("#apiKeyInput").mouseover(function() {
+		console.log($("#apiKeyInput").prop('disabled'));
+		if($("#apiKeyInput").prop('disabled')) {
+			$("#apiKeyInput").prop('disabled', false);
+		}
+	});
 
-//	if(key != '' && feedString != '') {
-//		setApiKey($('#apiKeyInput').val());
-//		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
-//		setFeeds(feeds);
-//	}
+	if(key != '' && feedString != '') {
+		setApiKey($('#apiKeyInput').val());
+		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
+		setFeeds(feeds);
+	}
 
 	if(key != '') {
 		$("#apiKeyInput").prop('disabled', true);
