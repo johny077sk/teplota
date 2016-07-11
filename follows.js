@@ -419,7 +419,7 @@
 ////		if($("#apiKeyInput").prop('disabled')) {
 //			$("#apiKeyInput").prop('disabled', false);
 //		}
-	});
+//	});
 
 //	if(key != '' && feedString != '') {
 //		setApiKey($('#apiKeyInput').val());
