@@ -100,7 +100,7 @@
 								//var series = [];
 								var points = [];
 
-								// Create Datastream UI
+							/*	// Create Datastream UI
 								$('.datastream-' + datastream.id).empty();
 								$('.datastream-' + datastream.id).remove();
 								$('#feed-' + feedId + ' .datastream.hidden').clone().appendTo('#feed-' + feedId + ' .datastreams').addClass('datastream-' + datastream.id).removeClass('hidden');
@@ -128,7 +128,7 @@
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
 								}
 								$('.datastream-' + datastream.id).removeClass('hidden');
-
+*/
 								// Historical Datapoints
 								if(datastreamData.datapoints) {
 
