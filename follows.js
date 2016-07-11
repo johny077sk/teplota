@@ -1,21 +1,4 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @johny077sk
- Unwatch 1
-  Star 0
-  Fork 840 johny077sk/channel-viz
-forked from xively/channel-viz
- Code  Pull requests 0  Wiki  Pulse  Graphs  Settings
-Tree: 446988b9f3 Find file Copy pathchannel-viz/follows.js
-446988b  3 days ago
-@johny077sk johny077sk Update follows.js
-4 contributors @johny077sk @pcheek @chut @geometrikal
-RawBlameHistory     467 lines (398 sloc)  16.3 KB
-(function ( $ ){
+function ( $ ){
 
 	/*
 	EXAMPLE CONFIGURATION
@@ -480,5 +463,3 @@ RawBlameHistory     467 lines (398 sloc)  16.3 KB
 // END Initialization
 
 })( jQuery );
-Status API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Contact Help
