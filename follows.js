@@ -148,7 +148,7 @@
 									
 									// Initialize Graph DOM Element
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .graph').attr('id', 'graph-' + feedId + '-' + datastream.id);
-									console.log(series[10]);	
+									console.log(series);	
 						 			console.log(i);
 	               					
 								} else {
