@@ -138,7 +138,7 @@
 									});
 
 									// Add Datapoints Array to Graph Series Array
-									series[i].push({
+									series.push({
 										name: datastream.id,
 										data: points,
 										color:  palette.color() //'#' + dataColor
@@ -148,7 +148,7 @@
 									
 									// Initialize Graph DOM Element
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .graph').attr('id', 'graph-' + feedId + '-' + datastream.id);
-									console.log(series[0][10]);	
+									console.log(series[10]);	
 						 			console.log(i);
 	               					
 								} else {
