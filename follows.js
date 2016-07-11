@@ -79,7 +79,7 @@
 				}
 				var datastreamidjm = [];
 				var i = 0;
-				series = [][];
+				series = [];
 				feedData.datastreams.forEach(function(datastream) {
 					var now = new Date();
 					var then = new Date();
