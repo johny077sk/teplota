@@ -392,13 +392,13 @@
 	var feedString = getParam('feeds');
 
 	// Check for Default Values
-	if(key == '' && defaultKey != '') {
+	//if(key == '' && defaultKey != '') {
 		key = defaultKey;
-	}
+	//}
 
-	if(feedString == '' && defaultFeeds.toString(',') != '') {
+	//if(feedString == '' && defaultFeeds.toString(',') != '') {
 		feedString = defaultFeeds.toString(',');
-	}
+	//}
 
 	if(applicationName != '') {
 		$('h1').html(applicationName).css('color', 'white');
@@ -411,14 +411,14 @@
 
 	var feeds = feedString.split(',');
 
-	$('#apiKeyInput').val(key);
-	$('#feedsInput').val(feedString);
+	//$('#apiKeyInput').val(key);
+	//$('#feedsInput').val(feedString);
 
-	$("#apiKeyInput").mouseover(function() {
-		console.log($("#apiKeyInput").prop('disabled'));
-		if($("#apiKeyInput").prop('disabled')) {
-			$("#apiKeyInput").prop('disabled', false);
-		}
+//	$("#apiKeyInput").mouseover(function() {
+//		console.log($("#apiKeyInput").prop('disabled'));
+////		if($("#apiKeyInput").prop('disabled')) {
+//			$("#apiKeyInput").prop('disabled', false);
+//		}
 	});
 
 	if(key != '' && feedString != '') {
