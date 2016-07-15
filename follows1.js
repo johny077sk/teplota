@@ -12,7 +12,7 @@
 	*/
 
 	var defaultKey		= '7WyLHjl7UoTy4TWmNtAnOUU5PWwm60mYKJ7lyzmhxZ37naOr', // Unique master Xively API key to be used as a default
-		Feedid	= [841838561], // Comma separated array of Xively Feed ID numbers
+		feedid	= [841838561], // Comma separated array of Xively Feed ID numbers
 		datastreamid = 'TeplotaKosice0'
 		applicationName	= '', // Replaces Xively logo in the header
 		duration	= '1day', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
