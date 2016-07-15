@@ -23,7 +23,7 @@ xively.setKey( defaultKey );
 // Function Declarations
 
 
-xively.datastream.history(feedId, datastreamid, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
+xively.datastream.history(feedid, datastreamid, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
   var series = [];
 	var points = [];
 
