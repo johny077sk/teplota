@@ -89,11 +89,11 @@ console.log(data2);
 										series:[
 											{
 											name: datastreamid1,
-											data: data1[0],
+											data: data1,
 											color: palette.color()
 											},{
 											name: datastreamid1,
-											data: data2[0],
+											data: data2,
 											color: palette.color()
 											}
 											] 
