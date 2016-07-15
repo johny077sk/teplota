@@ -89,11 +89,11 @@ console.log(datastreamData.current_value);
 										series:[
 											{
 											name: datastreamid1,
-											data: data1,
+											data: data1[0],
 											color: palette.color()
 											},{
 											name: datastreamid1,
-											data: data2,
+											data: data2[0],
 											color: palette.color()
 											}
 											] 
