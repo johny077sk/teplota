@@ -67,8 +67,8 @@ console.log(datastreamData.current_value);
 										width: 900,
 										height: 300,
 										renderer: 'line',
-										min: parseFloat(datastreamData.min_value) - .25*(parseFloat(datastreamData.max_value) - parseFloat(datastreamData.min_value)),
-										max: parseFloat(datastreamData.max_value) + .25*(parseFloat(datastreamData.max_value) - parseFloat(datastreamData.min_value)),
+										//min: parseFloat(datastreamData.min_value) - .25*(parseFloat(datastreamData.max_value) - parseFloat(datastreamData.min_value)),
+										//max: parseFloat(datastreamData.max_value) + .25*(parseFloat(datastreamData.max_value) - parseFloat(datastreamData.min_value)),
 										padding: {
 											top: 0.02,
 											right: 0.02,
