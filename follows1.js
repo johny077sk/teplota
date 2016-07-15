@@ -42,7 +42,7 @@ xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: 
 	data: points,
 	color: palette.color(),
 	});
-console.log(series1.name);
+console.log(series1);
 	
 });
 
@@ -80,7 +80,7 @@ console.log(datastreamData.current_value);
 											bottom: 0.02,
 											left: 0.02
 										},
-										series: [ series1, series2 ]
+										series: series1, series2 
 									});
 
 									graph.render();
