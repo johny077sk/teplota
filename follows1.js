@@ -80,7 +80,7 @@ console.log(datastreamData.current_value);
 											bottom: 0.02,
 											left: 0.02
 										},
-										series: series1, series2 
+										series:  series2 
 									});
 
 									graph.render();
