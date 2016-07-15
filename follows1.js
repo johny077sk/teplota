@@ -42,7 +42,7 @@ xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: 
 	data: points,
 	color: palette.color()
 	});
-console.log(series[0].name);
+console.log(series[1].name);
 	
 });
 
