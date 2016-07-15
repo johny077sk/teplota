@@ -63,7 +63,7 @@ console.log(datastreamData.current_value);
 	color: palette.color()
 	});
 
-	console.log(series[1].name);
+	console.log(series[0].name);
 });
 
 						 			// Build Graph
