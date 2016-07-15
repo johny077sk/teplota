@@ -11,7 +11,7 @@
 		hideForm		= 0;
 	*/
 
-	var defaultKey		= '7WyLHjl7UoTy4TWmNtAnOUU5PWwm60mYKJ7lyzmhxZ37naOr', // Unique master Xively API key to be used as a default
+	var defaultKey		= 'FKKyqnvMWmo3gurC9HRw2MEHyVq4YTHIpa1EXWpxLvwboTsp', // Unique master Xively API key to be used as a default
 		feedid	= [841838561], // Comma separated array of Xively Feed ID numbers
 		datastreamid = 'TeplotaKosice0'
 		applicationName	= '', // Replaces Xively logo in the header
