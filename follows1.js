@@ -31,7 +31,7 @@ xively.datastream.history(feedid, datastreamid, {duration: duration, interval: i
 	datastreamData.datapoints.forEach(function(datapoint) {
 	points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
 	});
-console.log(ddatastreamData.current_value);
+console.log(datastreamData.current_value);
 	// Add Datapoints Array to Graph Series Array
 	series.push({
 	name: datastreamid,
