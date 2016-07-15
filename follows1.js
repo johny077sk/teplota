@@ -66,8 +66,8 @@ console.log(datastreamData.current_value);
 	console.log(series[1].name);
 });
 
-console.log(series[0].name);
-console.log(series[1].name);
+//console.log(series[0].name);
+//console.log(series[1].name);
 
 						 			// Build Graph
 									var graph = new Rickshaw.Graph( {
