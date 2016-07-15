@@ -13,7 +13,8 @@
 
 	var defaultKey		= 'FKKyqnvMWmo3gurC9HRw2MEHyVq4YTHIpa1EXWpxLvwboTsp', // Unique master Xively API key to be used as a default
 		feedid	= [841838561], // Comma separated array of Xively Feed ID numbers
-		datastreamid = 'TeplotaKosice0'
+		datastreamid1 = 'TeplotaKosice0'
+		datastreamid2 = 'TeplotaKosice1'
 		applicationName	= '', // Replaces Xively logo in the header
 		duration	= '1day', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
 		interval	= 60, // Default interval for data to be displayed (in seconds)
@@ -22,23 +23,43 @@
 xively.setKey( defaultKey );
 // Function Declarations
 
-
-xively.datastream.history(feedid, datastreamid, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
-  var series = [];
-	var points = [];
+	 series = [ [] , [] ];
 	var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
+xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
+  	//var series = [];
+	var points = [];
+	
 	// Add Each Datapoint to Array
 	datastreamData.datapoints.forEach(function(datapoint) {
 	points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
 	});
+
 console.log(datastreamData.current_value);
 	// Add Datapoints Array to Graph Series Array
-	series.push({
+	series[0].push({
 	name: datastreamid,
 	data: points,
 	color: palette.color(),
 	});
+});
 
+xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
+  	//var series = [];
+	var points = [];
+	
+	// Add Each Datapoint to Array
+	datastreamData.datapoints.forEach(function(datapoint) {
+	points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
+	});
+
+console.log(datastreamData.current_value);
+	// Add Datapoints Array to Graph Series Array
+	series[1].push({
+	name: datastreamid,
+	data: points,
+	color: palette.color(),
+	});
+});
 
 						 			// Build Graph
 									var graph = new Rickshaw.Graph( {
@@ -54,7 +75,7 @@ console.log(datastreamData.current_value);
 											bottom: 0.02,
 											left: 0.02
 										},
-										series: series
+										series: series[0], series[1]
 									});
 
 									graph.render();
@@ -90,6 +111,6 @@ console.log(datastreamData.current_value);
 	            	   	graph: graph,
                     element: $('#slider')
 	               		});
-});
+
 
 })( jQuery );
