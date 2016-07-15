@@ -27,7 +27,7 @@ xively.setKey( defaultKey );
 	 data2 = [];
 	 var series = [];
 	var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
-xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
+data1 = xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
   	//var series = [];
 	var points = [];
 	// Add Each Datapoint to Array
@@ -35,7 +35,7 @@ xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: 
 	points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
 	
 	});
-	data1 = points;
+	//data1 = points;
 
 	// Add Datapoints Array to Graph Series Array
 	series.push({
@@ -44,10 +44,10 @@ xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: 
 	color: palette.color()
 	});
 
-	
+	return points;
 });
 
-xively.datastream.history(feedid, datastreamid2, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
+data2 = xively.datastream.history(feedid, datastreamid2, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
   	//var series = [];
 	var points = [];
 	
@@ -57,7 +57,7 @@ xively.datastream.history(feedid, datastreamid2, {duration: duration, interval: 
 	
 		
 	});
-data2 = points;
+//data2 = points;
 console.log(datastreamData.current_value);
 	// Add Datapoints Array to Graph Series Array
 	series.push({
@@ -65,7 +65,7 @@ console.log(datastreamData.current_value);
 	data: points,
 	color: palette.color()
 	});
-
+	return points
 	//console.log(series[1].name);
 });
 
