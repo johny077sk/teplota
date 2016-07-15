@@ -23,7 +23,8 @@
 xively.setKey( defaultKey );
 // Function Declarations
 
-	 series = [ ];
+	 data1 = [ ];
+	 data2 = [ ];
 	 //series2 = [ ];
 	var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
 xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
@@ -32,7 +33,7 @@ xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: 
 	// Add Each Datapoint to Array
 	datastreamData.datapoints.forEach(function(datapoint) {
 	points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
-	
+	data1 = points;
 	});
 
 
@@ -53,6 +54,8 @@ xively.datastream.history(feedid, datastreamid2, {duration: duration, interval: 
 	// Add Each Datapoint to Array
 	datastreamData.datapoints.forEach(function(datapoint) {
 	points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
+	data2 = points;
+		
 	});
 
 console.log(datastreamData.current_value);
@@ -83,7 +86,18 @@ console.log(datastreamData.current_value);
 											bottom: 0.02,
 											left: 0.02
 										},
-										series: series
+										series:[
+											{
+											name: datastreamid1,
+											data: data1,
+											color: palette.color()
+											},{
+											name: datastreamid1,
+											data: data2,
+											color: palette.color()
+											}
+											] 
+										
 									});
 
 									graph.render();
