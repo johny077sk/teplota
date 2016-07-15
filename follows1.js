@@ -66,11 +66,11 @@ console.log(datastreamData.current_value);
 	color: palette.color()
 	});
 
-	console.log(series[1].name);
+	//console.log(series[1].name);
 });
 
-//console.log(series[0].name);
-//console.log(series[1].name);
+console.log(data1);
+console.log(data2);
 
 						 			// Build Graph
 									var graph = new Rickshaw.Graph( {
