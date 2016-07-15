@@ -23,9 +23,9 @@
 xively.setKey( defaultKey );
 // Function Declarations
 
-	 data1 = [ ];
-	 data2 = [ ];
-	 series = [ ];
+	 var data1 = [ ];
+	 var data2 = [ ];
+	 var series = [ ];
 	var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
 xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
   	//var series = [];
