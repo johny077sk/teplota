@@ -29,10 +29,13 @@ xively.setKey( defaultKey );
 xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
   	//var series = [];
 	var points = [];
-	
+	i=0
 	// Add Each Datapoint to Array
 	datastreamData.datapoints.forEach(function(datapoint) {
 	points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
+	
+	console.log(points[i] );
+	i++	
 	});
 
 
