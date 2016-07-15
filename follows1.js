@@ -34,13 +34,15 @@ xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: 
 	points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
 	});
 
-console.log(datastreamData.current_value);
+
 	// Add Datapoints Array to Graph Series Array
 	series[0].push({
 	name: datastreamid1,
 	data: points,
 	color: palette.color(),
 	});
+console.log(series[0].name);
+	
 });
 
 xively.datastream.history(feedid, datastreamid2, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
@@ -59,6 +61,8 @@ console.log(datastreamData.current_value);
 	data: points,
 	color: palette.color(),
 	});
+
+	console.log(series[1].name);
 });
 
 						 			// Build Graph
