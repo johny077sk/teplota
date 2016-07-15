@@ -40,9 +40,9 @@ xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: 
 	series1.push({
 	name: datastreamid1,
 	data: points,
-	color: palette.color(),
+	color: palette.color()
 	});
-console.log(series1[0]);
+console.log(series1[0].name);
 	
 });
 
@@ -60,7 +60,7 @@ console.log(datastreamData.current_value);
 	series2.push({
 	name: datastreamid2,
 	data: points,
-	color: palette.color(),
+	color: palette.color()
 	});
 
 	console.log(series2[5]);
