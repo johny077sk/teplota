@@ -78,8 +78,8 @@ xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: 
 											bottom: 0.02,
 											left: 0.02
 										},
-										series:[
-											{
+										series: series
+										/*	{
 											name: datastreamid1,
 											data: data1,
 											color: palette.color()
@@ -89,7 +89,7 @@ xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: 
 											color: palette.color()
 											}
 											] 
-										
+										*/
 									});
 
 									graph.render();
