@@ -27,7 +27,7 @@ xively.setKey( defaultKey );
 	 data2 = [];
 	 var series = [];
 	var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
-data1 = xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
+xively.datastream.history(feedid, datastreamid1, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
   	//var series = [];
 	var points = [];
 	// Add Each Datapoint to Array
@@ -35,7 +35,7 @@ data1 = xively.datastream.history(feedid, datastreamid1, {duration: duration, in
 	points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
 	
 	});
-	//data1 = points;
+	data1 = points;
 
 	// Add Datapoints Array to Graph Series Array
 	series.push({
@@ -43,36 +43,28 @@ data1 = xively.datastream.history(feedid, datastreamid1, {duration: duration, in
 	data: points,
 	color: palette.color()
 	});
-
-	return points;
-});
-
-data2 = xively.datastream.history(feedid, datastreamid2, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
-  	//var series = [];
-	var points = [];
-	
-	// Add Each Datapoint to Array
-	datastreamData.datapoints.forEach(function(datapoint) {
-	points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
-	
-		
-	});
-//data2 = points;
-console.log(datastreamData.current_value);
-	// Add Datapoints Array to Graph Series Array
-	series.push({
-	name: datastreamid2,
-	data: points,
-	color: palette.color()
-	});
-	return points
-	//console.log(series[1].name);
-});
-
-console.log(data1);
-console.log(data2);
-
-						 			// Build Graph
+		xively.datastream.history(feedid, datastreamid2, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
+		  	//var series = [];
+			var points = [];
+			
+			// Add Each Datapoint to Array
+			datastreamData.datapoints.forEach(function(datapoint) {
+			points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
+			
+				
+			});
+		data2 = points;
+		console.log(datastreamData.current_value);
+			// Add Datapoints Array to Graph Series Array
+			series.push({
+			name: datastreamid2,
+			data: points,
+			color: palette.color()
+			});
+			
+			//console.log(series[1].name);
+			
+									 			// Build Graph
 									var graph = new Rickshaw.Graph( {
 										element: document.querySelector('#graph'),
 										width: 900,
@@ -130,9 +122,21 @@ console.log(data2);
 									});
 
 										var slider = new Rickshaw.Graph.RangeSlider({
-	            	   	graph: graph,
-                    element: $('#slider')
-	               		});
+	            	   							graph: graph,
+								                    element: $('#slider')
+									               		});
+
+			
+			
+			
+		});
+	
+});
+
+
+console.log(data1);
+console.log(data2);
+
 
 
 })( jQuery );
